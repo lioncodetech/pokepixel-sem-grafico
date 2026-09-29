@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "PokePixel - sem grafico",
+  "version": "1.0.0",
+  "description": "Desliga o desenho do mapa do PokePixel com Alt+G. O jogo continua rodando.",
+  "content_scripts": [
+    {
+      "matches": ["https://pokepixel.nietore.com/*", "https://poke.idleworld.online/*"],
+      "js": ["sem-grafico.js"],
+      "run_at": "document_idle",
+      "world": "MAIN"
+    }
+  ]
+}
