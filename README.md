@@ -1,6 +1,6 @@
 # PokePixel — sem gráfico
 
-Desliga o desenho do mapa do PokePixel. **Alt+G** liga e desliga.
+Desliga o desenho do mapa do PokePixel. **Alt+G** desliga o gráfico e **Alt+H** liga de volta.
 
 A interface continua na tela: janelas, botões, nomes dos personagens e dos NPCs. O que some é o
 mapa desenhado — tiles, sprites e clima.

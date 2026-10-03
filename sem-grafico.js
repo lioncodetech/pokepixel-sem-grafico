@@ -31,13 +31,18 @@
     setTimeout(() => caixa.remove(), 1400);
   };
 
+  // Dois atalhos vizinhos em vez de um que alterna: Alt+G desliga o grafico, Alt+H liga. Com um
+  // atalho so' nao da' para saber em que estado se esta' sem apertar e ver, e apertar de novo
+  // desfazia o que a pessoa acabou de pedir.
   addEventListener(
     'keydown',
     (e) => {
-      if (!e.altKey || e.ctrlKey || e.shiftKey || e.key.toLowerCase() !== 'g') return;
+      if (!e.altKey || e.ctrlKey || e.shiftKey) return;
+      const tecla = e.key.toLowerCase();
+      if (tecla !== 'g' && tecla !== 'h') return;
       e.preventDefault();
       e.stopPropagation();
-      ativo = !ativo;
+      ativo = tecla === 'g';
       try {
         localStorage.setItem(CHAVE, ativo ? '1' : '0');
       } catch (err) {
@@ -45,7 +50,7 @@
       }
       const sp = mapa();
       if (sp) sp.visible = !ativo;
-      aviso(ativo ? 'Grafico do mapa desligado (Alt+G)' : 'Grafico do mapa ligado (Alt+G)');
+      aviso(ativo ? 'Grafico do mapa desligado (Alt+G)' : 'Grafico do mapa ligado (Alt+H)');
     },
     true,
   );
