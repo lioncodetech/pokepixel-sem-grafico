@@ -25,7 +25,9 @@
     caixa.textContent = texto;
     caixa.style.cssText =
       'position:fixed;left:50%;top:18px;transform:translateX(-50%);z-index:2147483647;' +
-      'background:#11151dEE;color:#e6e9ef;font:13px system-ui,sans-serif;padding:8px 14px;' +
+      'background:#11151dE0;color:#e6e9ef;font:13px system-ui,sans-serif;padding:8px 14px;' +
+      // Um aviso que some em 1,4 s nao da' para apontar o mouse: a transparencia e' fixa.
+      'opacity:.88;' +
       'border:1px solid #3a4152;border-radius:8px;pointer-events:none';
     document.body.appendChild(caixa);
     setTimeout(() => caixa.remove(), 1400);

@@ -29,6 +29,11 @@ minutos, e é essa a intenção de o código estar aberto.
 
 `pokepixel.nietore.com` e `poke.idleworld.online`. Em qualquer outro site ela não é carregada.
 
+## Transparência
+
+Os avisos ficam um pouco transparentes, para não tapar o jogo atrás deles. Como somem sozinhos em
+pouco mais de um segundo, não dá para apontar o mouse: a transparência é fixa.
+
 ## Instalação
 
 Pela loja de extensões do LionMultInstance, ou à mão: baixe o `.zip` da
